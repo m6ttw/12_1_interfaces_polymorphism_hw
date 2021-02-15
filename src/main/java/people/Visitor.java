@@ -9,7 +9,7 @@ public class Visitor {
     private int age;
     private double height;
     private double money;
-    private ArrayList<Attraction> visitedAttractions;
+    public ArrayList<Attraction> visitedAttractions;
 
     public Visitor(int age, double height, double money) {
         this.age = age;

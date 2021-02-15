@@ -6,7 +6,7 @@ import themepark.ThemePark;
 public abstract class Attraction extends ThemePark {
     private String name;
     private int rating;
-    private int visitCount;
+    public int visitCount;
 
     public Attraction(String name, int rating) {
         this.name = name;
