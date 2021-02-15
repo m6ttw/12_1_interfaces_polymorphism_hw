@@ -1,8 +1,9 @@
 package attractions;
 
+import behaviours.IReviewed;
 import behaviours.ITicketed;
 
-public class Dodgems extends Attraction implements ITicketed {
+public class Dodgems extends Attraction implements ITicketed, IReviewed {
 
     public Dodgems(String name, int rating) {
         super(name, rating);

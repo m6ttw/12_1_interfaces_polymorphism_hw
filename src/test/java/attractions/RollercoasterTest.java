@@ -1,5 +1,6 @@
 package attractions;
 
+import people.Visitor;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class RollercoasterTest {
 
     RollerCoaster rollerCoaster;
-    people.Visitor visitor;
+    Visitor visitor;
 
     @Before
     public void before() {
@@ -32,25 +33,25 @@ public class RollercoasterTest {
 
     @Test
     public void priceOfTicketForNormalPerson(){
-        visitor = new people.Visitor(18, 190, 100);
+        visitor = new Visitor(18, 190, 100);
         assertEquals(8.40, rollerCoaster.priceFor(visitor), 0.0);
     }
 
     @Test
     public void priceOfTicketForLankyBeanpole(){
-        visitor = new people.Visitor(28, 201, 300);
+        visitor = new Visitor(28, 201, 300);
         assertEquals(16.80, rollerCoaster.priceFor(visitor), 0.0);
     }
 
     @Test
     public void isAllowedToRide(){
-        visitor = new people.Visitor(13, 146, 30);
+        visitor = new Visitor(13, 146, 30);
         assertEquals(true, rollerCoaster.isAllowedTo(visitor));
     }
 
     @Test
     public void isNotAllowedToRide(){
-        visitor = new people.Visitor(11, 144, 15);
+        visitor = new Visitor(11, 144, 15);
         assertEquals(false, rollerCoaster.isAllowedTo(visitor));
     }
 }

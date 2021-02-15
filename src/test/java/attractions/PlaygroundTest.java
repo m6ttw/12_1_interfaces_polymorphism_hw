@@ -1,5 +1,6 @@
 package attractions;
 
+import people.Visitor;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class PlaygroundTest {
     Playground playground;
-    people.Visitor visitor;
+    Visitor visitor;
 
     @Before
     public void before() throws Exception {
@@ -31,13 +32,13 @@ public class PlaygroundTest {
 
     @Test
     public void visitorCanPlay(){
-        visitor = new people.Visitor(14, 140, 0);
+        visitor = new Visitor(14, 140, 0);
         assertEquals(true, playground.isAllowedTo(visitor));
     }
 
     @Test
     public void visitorTooOldToPlay(){
-        visitor = new people.Visitor(16, 155, 10);
+        visitor = new Visitor(16, 155, 10);
         assertEquals(false, playground.isAllowedTo(visitor));
     }
 }

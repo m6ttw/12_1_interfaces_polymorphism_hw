@@ -1,9 +1,10 @@
 package attractions;
 
+import behaviours.IReviewed;
 import behaviours.ISecurity;
 import behaviours.ITicketed;
 
-public class RollerCoaster extends Attraction implements ITicketed, ISecurity {
+public class RollerCoaster extends Attraction implements ITicketed, ISecurity, IReviewed {
 
     public RollerCoaster(String name, int rating) {
         super(name, rating);
