@@ -41,4 +41,16 @@ public class RollercoasterTest {
         visitor = new people.Visitor(28, 201, 300);
         assertEquals(16.80, rollerCoaster.priceFor(visitor), 0.0);
     }
+
+    @Test
+    public void isAllowedToRide(){
+        visitor = new people.Visitor(13, 146, 30);
+        assertEquals(true, rollerCoaster.isAllowedTo(visitor));
+    }
+
+    @Test
+    public void isNotAllowedToRide(){
+        visitor = new people.Visitor(11, 144, 15);
+        assertEquals(false, rollerCoaster.isAllowedTo(visitor));
+    }
 }

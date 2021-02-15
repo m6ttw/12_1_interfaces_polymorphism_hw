@@ -37,7 +37,7 @@ public class TobaccoStallTest {
     }
 
     @Test
-    public void childCantBuyFags(){
+    public void toddlerCanBuyFags(){
         visitor = new people.Visitor(2, 60, 0);
         assertEquals(false, tobaccoStall.isAllowedTo(visitor));
     }
