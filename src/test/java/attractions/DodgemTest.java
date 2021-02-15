@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class DodgemTest {
 
     Dodgems dodgems;
+    people.Visitor visitor;
 
     @Before
     public void before() throws Exception {
@@ -29,4 +30,18 @@ public class DodgemTest {
     public void hasVisitCount() {
         assertEquals(0, dodgems.getVisitCount());
     }
+
+    @Test
+    public void adultsPayNormalPrice(){
+        visitor = new people.Visitor(25, 170, 150);
+            assertEquals(4.50, dodgems.priceFor(visitor), 0.0);
+    }
+
+    @Test
+    public void kidsPayHalfPrice(){
+        visitor = new people.Visitor(11, 125, 10);
+        assertEquals(2.25, dodgems.priceFor(visitor), 0.0);
+    }
+
+
 }
